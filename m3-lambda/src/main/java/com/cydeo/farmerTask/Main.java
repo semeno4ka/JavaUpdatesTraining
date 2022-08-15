@@ -19,6 +19,11 @@ public class Main {
         System.out.println(greenApple);
 
 
+        ApplePredicate weightApple = (Apple apple)-> apple.getWeight()>200;
+        ApplePredicate weight = apple->apple.getWeight()>200; // Type Inference!
+        filterApples(appleStock,weightApple);
+        //or
+        filterApples(appleStock, (Apple apple)-> apple.getWeight()>200);
 
 
 
