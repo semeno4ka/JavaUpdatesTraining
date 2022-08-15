@@ -21,4 +21,30 @@ private static <T> int countIf(List<T> c,UnaryPredicate<T> p){// have to put Int
       }
       return count;
 }
+/*
+Will the following class compile? If not, why?
+
+public final class Algorithm {
+public static <T> T max(T x, T y) {
+return x > y ? x : y;
+}
+}
+
+will not work, because generics does not accept PRIMITIVES, and >/< sign cannot be apllied to Objects
+
+Will the following method compile? If not, why?
+
+public static void print(List<? extends Number> list) {
+for (Number n : list)
+System.out.print(n + " ");
+System.out.println();
+}
+will work, because you specify the exact type as Numbers
+
+
+we can't use polymorphism within Node
+
+
+
+ */
 }
