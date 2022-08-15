@@ -74,5 +74,23 @@ public class LambdaIntro {
                  Can be used only in interfaces with ONE abstract methods( which is functional interface)
                  If there is more than one method, you should do it the way we did with farm apples
 
+Before Lambda:
+Interface
+Class implementing interfcae
+create method accepting different behaviour
+
+After:
+Interface (if you can use any ready functional interface from java, you do not need to create this)
+create method, pass lambda function - functional programming
+sort(pass lambda)
+
+
+Type Inference
+StringLengthLambda = (String s) -> s.length;
+type not required because compiler is able to detect the return type
+StringLengthMyLambda = s->s.length;
+if you have more than one parameter, ( ) are required
+StringLength myLambda = (x,y)-> x+y;
+
      */
 }
