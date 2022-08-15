@@ -56,5 +56,23 @@ public class LambdaIntro {
 
             myLambda = () -> 42; => action doesn't accept parameter just returns 42
 
+            Creating Lambda:
+                - how to create?
+                1. Create a new interface. If you have already interface, this is optional
+
+                interface MyLambda{}
+
+                2. Create a method, exact same signature with Lambda expression
+
+                 interface MyLambda{
+                 void print();
+                 }
+                 MyLambda abc = ()->System.out.println("Ozzy");
+
+                 - what is Data Type? The interface
+
+                 Can be used only in interfaces with ONE abstract methods( which is functional interface)
+                 If there is more than one method, you should do it the way we did with farm apples
+
      */
 }
