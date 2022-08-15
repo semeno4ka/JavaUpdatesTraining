@@ -21,6 +21,8 @@ public class Main {
 
 
 
+
+
     }
 
     private static List<Apple> filterApples(List<Apple> appleStock, ApplePredicate applePredicate){//  ApplePredicate looking for object
