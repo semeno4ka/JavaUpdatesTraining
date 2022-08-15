@@ -5,10 +5,13 @@ public class ArraySorting {// QuickSort,BubbleSOrt - ways to sort Array used bef
     public static void main(String[] args) {
 
         ArraySorting as= new ArraySorting();
-        as.sort();
+     QuickSort qs= new QuickSort();
+     BuubleSort bs = new BuubleSort();
+     as.sort(qs);// passed QS as behaviour
+        as.sort(bs);//passed BS as behaviour
 
     }
-    private void sort(){
-        System.out.println("Quick Sorting Array");
+    private void sort(Sorting sorting){
+        sorting.sort();// passed action to different object
     }
 }
