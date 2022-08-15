@@ -2,7 +2,7 @@ package com.cydeo.task;
 
 import java.util.Arrays;
 
-public class Hometask {
+public class Hometask_m1_m2 {
 
     public static void main(String[] args) {
         Integer[] arr={1,2,3,4,5};
@@ -21,4 +21,6 @@ public class Hometask {
 
         return a;
     }
+
+
 }
