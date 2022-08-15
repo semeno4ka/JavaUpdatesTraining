@@ -17,6 +17,24 @@ public class Main {
         // items.add("Apple"); accepted String, since it's an Object. No specifications on what should be a data type were used
         // Filtering required, since you are writing code for Integers and you do not want anyone to inout any other data type
         printDoubled(items);
+        System.out.println("------------------------");
+        FootballPlayer joe=new FootballPlayer("joe");// joe registered himself as football player
+        BaseballPlayer pat = new BaseballPlayer("pat");
+        SoccerPlayer beckham = new SoccerPlayer("beckham");
+
+        Team<SoccerPlayer> liverpool=new Team("liverpool");// team accepts any object, filtering required
+          /*
+        liverpool.addPlayer(joe);
+        liverpool.addPlayer(pat);
+        liverpool.addPlayer(beckham); all are from different fields but in one team, no specification
+         */
+        // liverpool.addPlayer(joe);
+        // liverpool.addPlayer(pat); will show compile error when we introduce specification to team as <Soccer>, since both are not soccer
+        liverpool.addPlayer(beckham);// all are from different fields but in one team, no specification
+
+        //Team<String> brokenTeam = new Team<>("what kind of team si this?");
+        // No compile error, since String is also a T-type of a class, T can accept an Object of any class
+
     }
 
 
