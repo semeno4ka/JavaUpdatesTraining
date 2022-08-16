@@ -1,4 +1,4 @@
-package com.cydeo.HomeTask;
+package com.cydeo.homeTask.apple;
 
 public enum Color {
 

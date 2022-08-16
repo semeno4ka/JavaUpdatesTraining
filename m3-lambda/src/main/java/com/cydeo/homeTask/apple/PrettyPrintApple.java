@@ -1,4 +1,4 @@
-package com.cydeo.HomeTask;
+package com.cydeo.homeTask.apple;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public class PrettyPrintApple {
        // Example for more than one line
        ApplePredicate fancyApple = apple->{
           String ch = apple.getWeight()>200?"Heavy":"Light";
-          return "A "+ch+ " "+apple.getColor()+" apple";
+          return "A "+ch+ " "+apple.getColor()+" apple";// if more than one line, curly braces required and return required as well
       };
 prettyPrintApple(inventory,fancyApple);
     }

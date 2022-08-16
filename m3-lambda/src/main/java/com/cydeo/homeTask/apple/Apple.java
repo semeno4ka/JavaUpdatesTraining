@@ -1,4 +1,4 @@
-package com.cydeo.HomeTask;
+package com.cydeo.homeTask.apple;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
