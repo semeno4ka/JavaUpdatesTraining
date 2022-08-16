@@ -45,8 +45,9 @@ public class FunctionalInterface {
         System.out.println("           SUPPLIER            ");
         Supplier<Double> randomValue = ()-> Math.random(); //since there is no parameter, it can retuen anyhting you specify according to data type you chosen
         System.out.println(randomValue.get());
-        Supplier<String> randomS=()->"Random sentence";
+        Supplier<String> randomS=()->"Anything";
         System.out.println(randomS.get());
+
 
 
     }
