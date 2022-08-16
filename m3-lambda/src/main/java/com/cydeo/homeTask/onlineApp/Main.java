@@ -19,15 +19,15 @@ public class Main {
         print(personList,person-> person.getAge()>18 && person.getGender().equals(Gender.MALE));
 // cam also do:
         CheckMember a= person -> person.getGender().equals(Gender.MALE) && person.getAge()>18;
-
+// we take the list and person, apply criteria through lambda and they are added to list and printed as output
 
     }
 
     private static void print(List<Person> personList,CheckMember checkMember ){
         List<Person> result=new ArrayList<>();
-        for(Person person:personList){
-            if(checkMember.check(person)){
-                result.add(person);
+        for(Person person:personList){ // we check every person from the list and check the criteria we need
+            if(checkMember.check(person)){ // this part of criteria get's it's own implementation in Lambda
+                result.add(person);// if it fits the creatia, the person adds to the list
             }
         }
         System.out.println(result);
