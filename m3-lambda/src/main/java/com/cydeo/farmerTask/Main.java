@@ -20,7 +20,7 @@ public class Main {
 
 
         ApplePredicate weightApple = (Apple apple)-> apple.getWeight()>200;
-        ApplePredicate weight = apple->apple.getWeight()>200; // Type Inference!
+        ApplePredicate weight = apple->apple.getWeight()>200; // Type Inference example!
         filterApples(appleStock,weightApple);
         //or
         filterApples(appleStock, (Apple apple)-> apple.getWeight()>200);
