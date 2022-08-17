@@ -19,8 +19,6 @@ public class Main {
         users.forEach(user-> System.out.println(user));
         //print all that starts with L
         System.out.println();
-        users.forEach(user-> System.out.println(user));
-        System.out.println();
         //or
         print(users,user->true);// no condition, if it is user, than print
         System.out.println();
