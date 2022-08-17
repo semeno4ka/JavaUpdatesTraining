@@ -24,12 +24,21 @@ public class Main {
         System.out.println();
 
         print(users,s-> s.getFirstName().startsWith("L"));
+
+        System.out.println(" print without method: ");
+        users.forEach(user-> {
+            if(user.getFirstName().startsWith("L")){
+                System.out.println(user);
+            }
+        });
+
+
     }
 
     public static void print(List<User> users, Predicate<User> s){//you are going through user Objects
         for(User user: users){
             if(s.test(user)){// this returns true if it meets the condition you apply later with Lambda
-                System.out.println(user.toString());
+                System.out.println(user);// used to be user.toString()
             }
         }
     }
