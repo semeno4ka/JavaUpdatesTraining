@@ -1,8 +1,6 @@
 package com.cydeo;
 
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
+import java.util.function.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -37,6 +35,17 @@ public class Main {
         Calculator obj=new Calculator();
         Calculate c4=obj::findMultiply;// directly through existing object
 
+        //Examples on existing functional interfaces
+        BiFunction<String,Integer,String> func= (str,i)->str.substring(i);// lambda way
+        // we can use :: because lambda expression is referencing already existing method=> substring()
+        BiFunction<String,Integer,String> func2= String::substring;//comes from class String. It's all it takes, the rest compiler recognizes
+
+        Function<Integer,Double> func3= new MyClass()::method;
+        BiFunction<MyClass,Integer,Double> func4= MyClass::method; // we don't need to call through object,can do it through class, because compiler knows what class Object is the object
+
+    /*
+    Thing to remember: (last 5 min before the 1st break rewatch)
+     */
 
     }
 }
