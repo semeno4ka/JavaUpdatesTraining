@@ -39,12 +39,12 @@ public class Task2 {
         System.out.println("BELOW 400 SORTED:name,calorie");
         DishData.getAll().stream()
                 .filter(dish->dish.getCalories()<400)
-                .sorted(comparing(Dish::getCalories))// comparing method must be imported
-                .map(dish -> dish.getName()+":"+ dish.getCalories())
-                .forEach(System.out::println);
+                .sorted(comparing(Dish::getCalories))// comparing method must be imported or called through class name
+                .map(dish -> dish.getName()+":"+ dish.getCalories())//It is no longer DISH stream, It is String stream.
+                .forEach(System.out::println);//=> it is called TERMINAL OPERATION
         /*
           .filter(dish->dish.getCalories()<400)
-          .sorted(comparing(Dish::getCalories))
+          .sorted(comparing(Dish::getCalories)) could add .reversed() to get different order of Calorie
           .map(Dish::getName)
           .forEach(System.out::println);
          */

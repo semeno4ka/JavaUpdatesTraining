@@ -55,13 +55,20 @@ Can also be like this, but not the best approach
                 .filter(i->i%2==0)
                 .map(i->i*3)
                 .forEach(System.out::println);
-        System.out.println("              TASK #1 Char number                          ");
-        //Given a list of words, print the number of characters in each word
-        List<String> words=Arrays.asList("JAVA","APPLE","HONDA","DEVELOPER");
-        words.stream()
-                .map(each->each+" "+each.length())// or just each.length()
-                .forEach(System.out::println);
 
+        System.out.println("                  FLATMAP                    ");
+        //FlatMap:
+        /*
+        FlatMAp vs Map:
+        map(): takes Stream<T> as input and return Stream<R>
+        It is mapper functions which produces single value for each input value. ONE-TO-ONE mapping
+
+        flapMap(): takes Stream<Stream<T>> (stream of stream) as an input and returns Stream<R>. ONE-TO-MANY mapping
+
+Stream.of(1,2,3,4) ->(f.e. double and return) [2,4,6,8]
+[ [1,2] [3,4] [5,6] [7,8] ]-> a stream of stream will return [1,2,3,4,5,6,7,8] flatMap all streams combined as one
+
+         */
 
 
 
