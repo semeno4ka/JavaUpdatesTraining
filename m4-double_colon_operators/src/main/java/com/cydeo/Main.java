@@ -46,9 +46,13 @@ public class Main {
         // we don't need to call through object,can do it through class,because compiler knows the class the Object belongs to beforehand,(MyClass) since it is passed as parameter (T,U,R)
         // thus it will understand the Object
 
-    /*
-    Thing to remember: (last 5 min before the 1st break rewatch)
-     */
+         Consumer <Integer> display = i->System.out.println(i);
+         Consumer <Integer> display2 = System.out::println; // can use double colon operator from the beginning
+         display2.accept(25);
+
+         //Implementation with Constructor ::
+
+
 
     }
 }
