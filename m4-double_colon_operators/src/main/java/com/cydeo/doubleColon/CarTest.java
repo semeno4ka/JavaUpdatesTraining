@@ -1,4 +1,4 @@
-package com.cydeo;
+package com.cydeo.doubleColon;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;

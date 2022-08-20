@@ -1,4 +1,4 @@
-package com.cydeo;
+package com.cydeo.doubleColon;
 
 import java.util.function.*;
 
@@ -50,8 +50,14 @@ public class Main {
          Consumer <Integer> display2 = System.out::println; // can use double colon operator from the beginning
          display2.accept(25);
 
-         //Implementation with Constructor ::
+         /*Implementation with Constructor :: (Check CarTest)
+         If required Functional Interface Does not exist, for example for 4 arguments constructor, you can create it yourself
 
+         @FunctionalInterface
+         public interface TriFunction<T,U,V,R>{
+         R apply(T t, U u, V v)
+          }
+     */
 
 
     }

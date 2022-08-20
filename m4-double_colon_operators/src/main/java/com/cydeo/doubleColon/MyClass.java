@@ -1,4 +1,4 @@
-package com.cydeo;
+package com.cydeo.doubleColon;
 
 public class MyClass {
    public double method(int x){
