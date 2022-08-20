@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-import static java.util.Comparator.comparing;
+import static java.util.Comparator.comparing;// importing static method requires static keyword
 
 public class AppleTest {
     public static void main(String[] args) {
@@ -30,9 +30,15 @@ public class AppleTest {
         inventory.sort(sortApple2);// same as inventory.sort(comparing(Apple::getWeight));
         System.out.println(inventory);
 
+        //Do the same in Descending order
+        inventory.sort(comparing(Apple::getWeight).reversed());// already existing method
+        System.out.println(inventory);
 
-
-
+        //Chaining
+        inventory
+                .sort(comparing(Apple::getWeight)
+                        .reversed()
+                        .thenComparing(Apple::getColor));
 
 
 
