@@ -11,8 +11,8 @@ public class Main {
         FI- is an interface which accepts only one abstract method(there can be other methods, but never more than one abstract)
         USE verbal power of explanation during interview!!!*/
 
-        BiConsumer<Integer,Integer> add= (x,y)-> System.out.println(x+y);
-        Calculate calc= (x,y)->System.out.println(5+6);
+        BiConsumer<Integer,Integer> add= (x,y)-> System.out.println(x+y);// if you don't have your own interface
+        Calculate calc= (x,y)->System.out.println(x+y);
 
         Calculator.findSum(5,6);// same method from another class
 
@@ -26,10 +26,11 @@ public class Main {
         // to make it understandable for compiler colon was introduces ::
         Calculate c2 = Calculator::findSum;// compiler sees that implementation is identical and thus doesn't require specification
         c2.calculate(5,6);
-        // Above example References static method
+        // Above example References static method (accessed through class name, Func Interface Varname = ClassName:: methodName) no parameters needed
+        //parameters are given when you pass the method: varName.AbstractMethodName(parameters);
 
-        //Refference to Instance Method:
-
+        //Reference to Instance Method: (accessed through object, Func Interface Varname = new Object/existing Object:: methodName)no parameters needed
+        //parameters are given when you pass the method: varName.AbstractMethodName(parameters);
         Calculate c3 = new Calculator()::findMultiply; // since it is instance, we have to create object to call method
         //or
         Calculator obj=new Calculator();
@@ -40,8 +41,10 @@ public class Main {
         // we can use :: because lambda expression is referencing already existing method=> substring()
         BiFunction<String,Integer,String> func2= String::substring;//comes from class String. It's all it takes, the rest compiler recognizes
 
-        Function<Integer,Double> func3= new MyClass()::method;
-        BiFunction<MyClass,Integer,Double> func4= MyClass::method; // we don't need to call through object,can do it through class, because compiler knows what class Object is the object
+        Function<Integer,Double> func3= new MyClass()::method;// call through object, because compiler doen/t know which class the object will belong to
+        BiFunction<MyClass,Integer,Double> func4= MyClass::method;
+        // we don't need to call through object,can do it through class,because compiler knows the class the Object belongs to beforehand,(MyClass) since it is passed as parameter (T,U,R)
+        // thus it will understand the Object
 
     /*
     Thing to remember: (last 5 min before the 1st break rewatch)
