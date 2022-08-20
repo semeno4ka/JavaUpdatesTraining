@@ -38,7 +38,7 @@ public class AppleTest {
         inventory
                 .sort(comparing(Apple::getWeight)
                         .reversed()
-                        .thenComparing(Apple::getColor));
+                        .thenComparing(Apple::getColor));// color sorted alphabetically
 
 
 
