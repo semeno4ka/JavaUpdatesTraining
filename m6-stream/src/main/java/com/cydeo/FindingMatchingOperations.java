@@ -4,6 +4,7 @@ import com.cydeo.Task.Dish;
 import com.cydeo.Task.DishData;
 
 import java.util.Optional;
+import java.util.stream.IntStream;
 
 public class FindingMatchingOperations {
     public static void main(String[] args) {
@@ -30,6 +31,18 @@ public class FindingMatchingOperations {
 //Optional[Dish(name=fries, vegetarian=true, calories=530, type=OTHER)]   VS  Dish(name=fries, vegetarian=true, calories=530, type=OTHER)
         System.out.println(dish.get());
 
+        System.out.println("                 FIND FIRST               ");
+        Optional<Dish> dish2=DishData.getAll().stream().filter(Dish::isVegetarian).findFirst();
+        System.out.println(dish2);
+        System.out.println(dish.get());// always returns the first matching
+
+        /*FIND ANY  vs FIND FIRST: any can give anything, first ALWAYS first.
+         How to prove?=>
+         PARALLEL STREAM(Async)
+*/
+        System.out.println(IntStream.range(0,100).parallel().findAny().getAsInt());//65 -any
+        System.out.println(IntStream.range(0,100).parallel().findFirst().getAsInt());//0 -first
+        // action happens randomly due to parallel
 
 
 
