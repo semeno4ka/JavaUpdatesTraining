@@ -65,5 +65,10 @@ public class FindingMatchingOperations {
         Optional<Dish> maxDish=DishData.getAll().stream().max(Comparator.comparing(Dish::getCalories));
         System.out.println(maxDish.get());// pork 800 cal
 
+
+        System.out.println("                REDUCE                     ");
+        // produce one single result from a sequence of elements (Total salaries, total calories etc)
+        // Two argument: initial value(optional), binaryOperator(a,b)-> a+b
+
     }
 }
