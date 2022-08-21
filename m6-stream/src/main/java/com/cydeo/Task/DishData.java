@@ -12,7 +12,7 @@ public class DishData {
             new Dish("fries",true,530,Type.OTHER),
             new Dish("rice",true,350,Type.OTHER),
             new Dish("fruit",true,120,Type.OTHER),
-            new Dish("pizza",true,5500,Type.OTHER),
+            new Dish("pizza",true,550,Type.OTHER),
             new Dish("prawns",false,300,Type.FISH),
             new Dish("salmon",false,450,Type.FISH));
     }
