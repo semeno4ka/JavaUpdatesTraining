@@ -3,6 +3,9 @@ package com.cydeo;
 import com.cydeo.Task.Dish;
 import com.cydeo.Task.DishData;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
@@ -35,7 +38,7 @@ public class FindingMatchingOperations {
         Optional<Dish> dish2=DishData.getAll().stream().filter(Dish::isVegetarian).findFirst();
         System.out.println(dish2);
         System.out.println(dish.get());// always returns the first matching
-
+        System.out.println("                      PARALLEL STREAM                   ");
         /*FIND ANY  vs FIND FIRST: any can give anything, first ALWAYS first.
          How to prove?=>
          PARALLEL STREAM(Async)
@@ -44,7 +47,23 @@ public class FindingMatchingOperations {
         System.out.println(IntStream.range(0,100).parallel().findFirst().getAsInt());//0 -first
         // action happens randomly due to parallel
 
+        List<String> list1= Arrays.asList("Jonny","David","Jack","Duke","Danny","Yulia","Mark","Misha");
+        List<String> list2= Arrays.asList("Jonny","David","Jack","Duke","Danny","Yulia","Mark","Misha");
+        Optional<String> findFirst=list1.parallelStream().filter(s->s.startsWith("D")).findFirst();
+        Optional<String> findAny=list2.parallelStream().filter(s->s.startsWith("J")).findAny();
+        System.out.println(findFirst.get());//David -> first
+        System.out.println(findAny.get());//Jack -> is not first, just random
+        Optional<String> findFirst2=list1.stream().filter(s->s.startsWith("D")).findFirst();
+        Optional<String> findAny2=list2.stream().filter(s->s.startsWith("J")).findAny();
+        System.out.println(findFirst2.get());//David - comes first with regular stream as well
+        System.out.println(findAny2.get());//Jonny -> comes first with regular stream
 
+
+        System.out.println("                MIN AND MAX                     ");
+        Optional<Dish> minDish=DishData.getAll().stream().min(Comparator.comparing(Dish::getCalories));   //stream().sorted().findFirst()
+        System.out.println(minDish.get());// fruit 120 cal
+        Optional<Dish> maxDish=DishData.getAll().stream().max(Comparator.comparing(Dish::getCalories));
+        System.out.println(maxDish.get());// pork 800 cal
 
     }
 }
