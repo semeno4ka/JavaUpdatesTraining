@@ -10,7 +10,9 @@ public class BigDecimalDemo {
         double amount2 =374.26;
         System.out.println(amount1-amount2);//0.3000000000017......
         //after today, whenever we need double, we use BigDecimal
-        //BigDecimal is a class
+        //BigDecimal is a class, creates Objects
+        // with BigDecimal "equals" cannot be used, instead Comparator=> compareTo() and other build-in methods
+
 
 
         System.out.println("           How to create BigDecimal          ");
@@ -29,6 +31,15 @@ public class BigDecimalDemo {
         System.out.println(number1.setScale(1, RoundingMode.FLOOR));
         System.out.println(number1.setScale(2, RoundingMode.CEILING));
         System.out.println(number1.setScale(2, RoundingMode.FLOOR));
+
+        System.out.println("               compareTo()              ");
+        System.out.println(new BigDecimal("2").compareTo(new BigDecimal("2")));//0  equals
+        System.out.println(new BigDecimal("3").compareTo(new BigDecimal("2")));//1  greater
+        System.out.println(new BigDecimal("1").compareTo(new BigDecimal("2")));//-1 less
+
+
+
+
 
 
         class Employee{
