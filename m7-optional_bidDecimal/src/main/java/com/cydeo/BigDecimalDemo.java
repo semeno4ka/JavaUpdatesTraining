@@ -9,10 +9,15 @@ public class BigDecimalDemo {
         double amount1= 374.56;
         double amount2 =374.26;
         System.out.println(amount1-amount2);//0.3000000000017......
-        //after today, whenever we need double, we use BigDecimal
-        //BigDecimal is a class, creates Objects
-        // with BigDecimal "equals" cannot be used, instead Comparator=> compareTo() and other build-in methods
-
+   /*    after today, whenever we need double, we use BigDecimal
+        BigDecimal is a class, creates Objects
+        with BigDecimal "equals" cannot be used, instead Comparator=> compareTo() and other build-in methods
+        Important note, that starting java10 releases are made TWICE a year, comparing to years waiting time before release in the past
+        LTS vs Non-LTS: Long-Term Support. Some Versions are ready to use for a long-term,
+        other,with shorter releases, are not suitable for long-term support, Oracle supports only till next release
+        Only 3 year releases get Long support
+        Java 8 has the longest support extended till 2030, 11-2026,17-2029
+*/
 
 
         System.out.println("           How to create BigDecimal          ");
