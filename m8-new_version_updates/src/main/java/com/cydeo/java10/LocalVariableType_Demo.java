@@ -3,7 +3,7 @@ package com.cydeo.java10;
 import java.util.Arrays;
 import java.util.List;
 
-public class LocalVariableTypeDemo {
+public class LocalVariableType_Demo {
     /*
     Type Inference: compiler is smart enough to detect the type of variable you are using in certain expressions
     f.e. "Cydeo" is obvious a String due to "" no need to specify=> car str="Cydeo", var number=15
