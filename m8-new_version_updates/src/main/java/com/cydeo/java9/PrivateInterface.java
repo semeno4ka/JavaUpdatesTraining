@@ -24,6 +24,7 @@ public interface PrivateInterface {
     }
 
     // with private can make internal method to use in other methods for clean and efficient code
+    // if you make it oublic, it will be accessible outside
     private void validDate(LocalDate date){
         if(date.isBefore(LocalDate.of(2001,1,1))){
             throw new IllegalArgumentException();
