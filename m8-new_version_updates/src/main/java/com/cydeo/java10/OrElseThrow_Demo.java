@@ -4,7 +4,7 @@ import java.util.Optional;
 
 public class OrElseThrow_Demo {
     /*
-    combines get and isPresent in one code. to avoid NullPointerException
+    combines get and isPresent in one code. to avoid NullPointerException with Optional
     Will probably replace get
 
     get doen't check if the element exist, it throws exception right away
