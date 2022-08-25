@@ -29,15 +29,15 @@ public class TakeWhileDropWhile {
     public static List<String> getStocksBelowFiveHundredFilter(List<Stock> stocks){
         return stocks.stream()
                 .peek(stock -> System.out.println("Filter proccessing : " + stock))
-                .filter(TakeWhileDropWhile::isStockLessThanFiveHundred)
+                .filter(TakeWhileDropWhile::isStockLessThanFiveHundred)// if less than 500
                 .map(Stock::getName)
-                .collect(Collectors.toList());
+                .collect(Collectors.toList());//[Instagram, Tesla, Facebook]
     }
 
     public static List<String> getStocksBelowFiveHundred(List<Stock> stocks){
         return stocks.stream()
                 .peek(stock -> System.out.println("takeWhile proccessing : " + stock))
-                .takeWhile(TakeWhileDropWhile::isStockLessThanFiveHundred)
+                .takeWhile(TakeWhileDropWhile::isStockLessThanFiveHundred)// add while is less, as soon as Higher, drop
                 .map(Stock::getName)
                 .collect(Collectors.toList());
     }
@@ -45,7 +45,7 @@ public class TakeWhileDropWhile {
     public static List<String> getStocksAboveFiveHundred(List<Stock> stocks){
         return stocks.stream()
                 .peek(stock -> System.out.println("dropWhile proccessing : " + stock))
-                .dropWhile(TakeWhileDropWhile::isStockLessThanFiveHundred)
+                .dropWhile(TakeWhileDropWhile::isStockLessThanFiveHundred)// while true-drop, as soon as not true, take
                 .map(Stock::getName)
                 .collect(Collectors.toList());
     }

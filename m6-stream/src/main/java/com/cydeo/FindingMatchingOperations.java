@@ -30,7 +30,7 @@ public class FindingMatchingOperations {
 
         System.out.println("                 FIND ANY               ");
         Optional<Dish> dish=DishData.getAll().stream().filter(Dish::isVegetarian).findAny();
-        System.out.println(dish);// returns something matching. Better to use with get() to get regular time, not Optional
+        System.out.println(dish);// returns something matching. Better to use with get() to get regular type, not Optional
 //Optional[Dish(name=fries, vegetarian=true, calories=530, type=OTHER)]   VS  Dish(name=fries, vegetarian=true, calories=530, type=OTHER)
         System.out.println(dish.get());
 

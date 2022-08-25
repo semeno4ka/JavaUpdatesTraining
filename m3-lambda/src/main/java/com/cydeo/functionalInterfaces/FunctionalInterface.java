@@ -33,7 +33,7 @@ public class FunctionalInterface {
         System.out.println("           FUNCTION            ");
         Function<String,String> fun = s->"Hello "+s;
         System.out.println(fun.apply("Joe"));
-        Function<Integer,Integer> in=i->2-i;// interesting implementation with Integers
+        Function<Integer,Integer> in=i->i-2;// interesting implementation with Integers
         System.out.println(in.apply(3));
         System.out.println();
 
